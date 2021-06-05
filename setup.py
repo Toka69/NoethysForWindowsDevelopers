@@ -75,7 +75,7 @@ manifest = """
 
 
 def GetVersion():
-    """ Recherche du numéro de version """
+    """ Recherche du numï¿½ro de version """
     fichierVersion = open(os.path.join(NOETHYS_PATH, "Versions.txt"), "r")
     txtVersion = fichierVersion.readlines()[0]
     fichierVersion.close()
@@ -95,7 +95,7 @@ options = {
                 "email", "email.encoders", "email.generator", "email.iterators", "email.utils",
                 "email.mime.base", "email.mime.multipart", "email.mime.text",
                 "email.mime.image", "email.mime.audio", "email.base64mime",
-                "pyttsx.drivers.sapi5", "zope.interface", "mysql.connector.locales.eng.client_error"
+                "pyttsx.drivers.sapi5",
                 ],
 
          'excludes' : [
@@ -133,7 +133,18 @@ options = {
                 "api-ms-win-core-heap-l1-2-0.dll", "api-ms-win-core-handle-l1-1-0.dll",
                 "api-ms-win-core-io-l1-1-1.dll", "api-ms-win-core-com-l1-1-1.dll",
                 "api-ms-win-core-memory-l1-1-2.dll", "api-ms-win-core-version-l1-1-1.dll",
-                "api-ms-win-core-version-l1-1-0.dll",
+                "api-ms-win-core-version-l1-1-0.dll", "api-ms-win-eventlog-legacy-l1-1-0.dll",
+                "api-ms-win-eventing-classicprovider-l1-1-0.dll", "api-ms-win-eventing-classicprovider-l1-1-0.dll",
+                "api-ms-win-core-registry-l2-1-0.dll", "api-ms-win-core-registry-l2-1-0.dll",
+                "api-ms-win-core-heap-l1-1-0.dll", "api-ms-win-core-timezone-l1-1-0.dll",
+                "api-ms-win-core-localization-l1-2-0.dll", "api-ms-win-core-threadpool-l1-2-0.dll",
+                "api-ms-win-crt-private-l1-1-0.dll", "api-ms-win-core-processthreads-l1-1-1.dll",
+                "api-ms-win-core-file-l1-1-0.dll", "api-ms-win-core-processthreads-l1-1-0.dll",
+                "api-ms-win-crt-string-l1-1-0.dll", "api-ms-win-crt-runtime-l1-1-0.dll",
+                "api-ms-win-core-errorhandling-l1-1-0.dll", "api-ms-win-eventing-consumer-l1-1-0.dll",
+                "api-ms-win-perf-legacy-l1-1-0.dll", "api-ms-win-core-synch-l1-1-0.dll",
+                "api-ms-win-core-interlocked-l1-1-0.dll", "api-ms-win-core-debug-l1-1-0.dll",
+                "api-ms-win-core-sysinfo-l1-1-0.dll", "api-ms-win-eventing-controller-l1-1-0.dll",
 
                 "numpy-atlas.dll",
 
@@ -195,7 +206,7 @@ data_files=[
             # Polices
             GetDossiers("Static/Polices"),
 
-            # Fichiers à importer :
+            # Fichiers ï¿½ importer :
             ('', ['noethys/Versions.txt', 'noethys/Licence.txt', 'noethys/Icone.ico']),
 
             ]
@@ -220,7 +231,7 @@ setup(
     name = "Noethys",
     version = VERSION_APPLICATION,
     author = "Ivan LUCAS",
-    description = u"Noethys, le logiciel libre et gratuit de gestion multi-activités",
+    description = u"Noethys, le logiciel libre et gratuit de gestion multi-activitï¿½s",
     long_description = open("README.md").read().decode("iso-8859-15"),
     url = "http://www.noethys.com",
     license = "GPL V3",
@@ -248,9 +259,9 @@ if "py2exe" in sys.argv :
 
     z = zipfile.ZipFile(os.path.join("dist/", "library.zip"), 'a')
 
-    # IMPORTANT : Ce code ne fonctione que si Pytz est unzippé :
+    # IMPORTANT : Ce code ne fonctione que si Pytz est unzippï¿½ :
     # Commande easy_install --upgrade --always-unzip pytz
-    # Pour la mettre à jour avec un dézippe automatique
+    # Pour la mettre ï¿½ jour avec un dï¿½zippe automatique
 
     # Timezone de pytz :
     print "Ajout manuel du repertoire Zoneinfo de pytz..."
@@ -268,7 +279,7 @@ if "py2exe" in sys.argv :
     nom = "C866CA3A-32F7-11D2-9602-00C04F8EE628x0x5x0.py"
     z.write("noethys/Outils/%s" % nom, "win32com/gen_py/%s" % nom)
 
-    # Importe le cacert.pem dans le répertoire certifi
+    # Importe le cacert.pem dans le rï¿½pertoire certifi
     import certifi
     chemin_cert = certifi.where()
     z.write(chemin_cert, "certifi/cacert.pem")
@@ -276,7 +287,7 @@ if "py2exe" in sys.argv :
     # Cloture le ZIP
     z.close()
 
-    # Supprime le répertoire des données exemples de Matplotlib
+    # Supprime le rï¿½pertoire des donnï¿½es exemples de Matplotlib
     print "Supprime les donnees exemples de Matplotlib si besoin..."
     try :
         shutil.rmtree("dist/mpl-data/sample_data")

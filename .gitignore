@@ -23,13 +23,8 @@ CreateurMAJ_py3.py
 setup_source.bat
 setup_wheel.bat
 setup_windows.bat
-gdiplus.dll
 libiconv-2.dll
 libzbar-0.dll
-msvcm90.dll
-msvcp90.dll
-msvcr90.dll
-Microsoft.VC90.CRT.manifest
 Thumbs.db
 .bak
 *.xlang
@@ -65,7 +60,6 @@ var/
 # PyInstaller
 #  Usually these files are written by a python script from a template 
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
 *.spec
 
 # Installer logs

@@ -6,29 +6,27 @@ TAP ou NAP, clubs sportifs et culturels...
 
 Plus d'infos sur www.noethys.com
 
+Certaines librairies présentes dans ce projet sont la propriété exclusive de Microsoft.
 
 Installation sur Windows
 ------------------
 
-Allez dans la rubrique Téléchargements du site www.noethys.com pour télécharger la version compilée pour Windows.
+Installer les executables se trouvant dans le dossier binaries :
+1) Python2.7 (penser à cocher la case "ajouter au path")
+2) VCForPython27
+3) Py2exe, wxPython et MYSQL-Python
 
-
-Installation sur Ubuntu 20.04
-------------------
-
-Lancez dans votre console Linux les commandes suivantes :
+Installer les modules python. Se placer à la racine du projet et saisir :
 ```
-sudo apt-get install git curl libsdl2-mixer-2.0-0 libsdl2-image-2.0-0 libsdl2-2.0-0 python3-pip python3-pyscard python3-dev default-libmysqlclient-dev build-essential
-pip3 install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04 wxPython
-git clone https://github.com/Noethys/Noethys
-pip3 install -r Noethys/requirements.txt
-python3 Noethys/noethys/Noethys.py
+pip install -r requirements.txt
 ```
 
+A ce stade, Noethys doit correctement fonctionner en executant :
+```
+noethys/Noethys.py
+```
 
-
-Installation depuis les sources
-------------------
-Si vous rencontrez les difficultés d'installation ou souhaitez installer Noethys depuis les sources,
-consultez les documents dédiés ici : https://github.com/Noethys/Noethys/tree/master/noethys/Doc
-
+Pour compiler, se placer à la racine du projet et saisir:
+```
+python setup.py py2exe
+```

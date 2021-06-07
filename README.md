@@ -8,7 +8,7 @@ Plus d'infos sur www.noethys.com
 
 Certaines librairies présentes dans ce projet sont la propriété exclusive de Microsoft.
 
-Installation sur Windows
+Installation des sources sur Windows et compilation
 ------------------
 
 Installer les executables se trouvant dans le dossier binaries :
